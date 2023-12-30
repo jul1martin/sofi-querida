@@ -14,9 +14,9 @@
     let esCorrecta = false;
     
     while(!esCorrecta) {
-        welcome = prompt('SABES QUIEN SOY? 1 para "SI" 2 para "NO"')
-
-        if(welcome == 1) esCorrecta = true;
+        if(welcome == 1) {
+            esCorrecta = true;
+        } else welcome = prompt('SABES QUIEN SOY? 1 para "SI" 2 para "NO"')
         
     }
     let response = prompt("Bueno... a ver, decime quien");
@@ -27,12 +27,13 @@
             otherEsCorrecta = true;
             
             alert("Muy bien so, estaba claro que el unico virgo que hacia esto era yo.")
+        } else {
+            if(attempts == 0) response = promtp("no pienses que es ilimitado esto, otra chance mas...");
+            if(attempts == 1) response = prompt("Dale flaca... el celu era de pato bullrich asi que yo que vos le dejo de pifiar");
+            if(attempts >= 2) response = prompt("Cuantos mensajes diferentes iba a hacer, alta paja, si llegas hasta aca me enojo");
+            
+            attempts++
         }
-        if(attempts == 0) response = promtp("no pienses que es ilimitado esto, otra chance mas...");
-        if(attempts == 1) response = prompt("Dale flaca... el celu era de pato bullrich asi que yo que vos le dejo de pifiar");
-        if(attempts >= 2) response = prompt("Cuantos mensajes diferentes iba a hacer, alta paja, si llegas hasta aca me enojo");
-        
-        attempts++
     }
 </script>
 </html>
